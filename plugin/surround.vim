@@ -416,14 +416,14 @@ function! s:dosurround(...) " {{{1
   endif
   let keeper = getreg('"')
   let okeeper = keeper " for reindent below
-  if keeper == ""
-    call setreg('"',original,otype)
-    let &clipboard = cb_save
-    if !sol_save
-      set nostartofline
-    endif
-    return ""
-  endif
+  "if keeper == ""
+  "  call setreg('"',original,otype)
+  "  let &clipboard = cb_save
+  "  if !sol_save
+  "    set nostartofline
+  "  endif
+  "  return ""
+  "endif
   let oldline = getline('.')
   let oldlnum = line('.')
   if char ==# "p"
